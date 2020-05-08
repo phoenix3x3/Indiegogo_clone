@@ -33,5 +33,6 @@
   "bugs": {
     "url": "https://github.com/phoenix3x3/Indiegogo_clone/issues"
   },
-  "homepage": "https://github.com/phoenix3x3/Indiegogo_clone#readme"
+  "homepage": "https://github.com/phoenix3x3/Indiegogo_clone#readme",
+  "proxy": "http://localhost:5000/"
 }
