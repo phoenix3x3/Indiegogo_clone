@@ -31,7 +31,7 @@ export const loadUser = () => (dispatch, getState) => {
   dispatch({ type: USER_LOADING });
 
   axios
-    .get("/api/authorizate", tokenConfig(getState))
+    .get("/api/authorizate/", tokenConfig(getState))
     .then((res) =>
       dispatch({
         type: USER_LOADED,
@@ -56,7 +56,7 @@ export const registerUser = ({ name, lastName, email, password }) => (
   };
   const body = JSON.stringify({ name, email, lastName, password });
   axios
-    .post("/api/registration", body, config)
+    .post("/api/registration/", body, config)
     .then((res) =>
       dispatch({
         type: REGISTER_SUCCESS,
@@ -88,7 +88,7 @@ export const loginUser = ({ email, password }) => (dispatch) => {
   const body = JSON.stringify({ email, password });
 
   axios
-    .post("/api/login", body, config)
+    .post("/api/login/", body, config)
     .then((res) => {
       dispatch({
         type: LOGIN_SUCCESS,
