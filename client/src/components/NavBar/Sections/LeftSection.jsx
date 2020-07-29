@@ -9,7 +9,7 @@ function LeftSection() {
       <div className="header header__left-nav-bar nav-bar-item ">
         {/* eslint-disable-next-line */}
         <a href="#" className="label">
-          INDIEGOGO
+          SOME SHIT
         </a>
       </div>
       <div className="header header__left-nav-bar nav-bar-item">
