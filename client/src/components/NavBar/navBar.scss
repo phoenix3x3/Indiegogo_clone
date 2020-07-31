@@ -6,12 +6,17 @@
   height: 60px;
   justify-content: space-between;
   font-weight: 500;
-  color: rgb(42, 42, 42);
+  color: white;
   line-height: 24px;
+  background-color: #24292e;
+
+  a {
+    color: white;
+  }
 
   a:hover {
     text-decoration: none;
-    color: black;
+    color: #606468;
   }
 
   .nav-bar-item {
@@ -25,9 +30,10 @@
   .label {
     font-weight: 700;
     font-size: 2.2em;
-    color: black;
+    color: white;
     text-align: bottom;
   }
+
 
   .header__left-nav-bar {
     display: flex;

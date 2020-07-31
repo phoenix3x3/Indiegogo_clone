@@ -11,11 +11,11 @@ function RightSection(props) {
     <div className="header header__right-nav-bar">
       <div className="header header__right-nav-bar nav-bar-item">
         {/* eslint-disable-next-line */}
-        <a href="">For Entrepreneurs</a>
+        <a href="">Some function</a>
       </div>
       <div className="header header__right-nav-bar nav-bar-item">
         {/* eslint-disable-next-line */}
-        <a href="">Start a Campaign</a>
+        <a href="">Some function</a>
       </div>
       <div className="header header__right-nav-bar nav-bar-item divider"></div>
       {!isAuthenticated ? (
