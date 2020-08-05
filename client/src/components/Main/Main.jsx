@@ -1,11 +1,20 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import AdminContent from "../AdminContent/AdminContent";
-import UserContent from "../UserContent/UserContent";
+import GuestContent from "../GuestContent/GuestContent";
 const Main = (props) => {
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
-
-  return <>{isAuthenticated ? <AdminContent /> : <UserContent />}</>;
+  return (
+    <>
+      {isAuthenticated ? (
+        <div>
+          <AdminContent />
+        </div>
+      ) : (
+        <GuestContent />
+      )}
+    </>
+  );
 };
 
 export default Main;
