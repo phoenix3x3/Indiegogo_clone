@@ -1,27 +1,35 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../../NavBar/navBar.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
+// import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import Logo from "../../../Assets/EL-sense-.svg";
-function LeftSection() {
+const LeftSection = () => {
   return (
     <div className="header header__left-nav-bar">
       <div className="header header__left-nav-bar nav-bar-item ">
         {/* eslint-disable-next-line */}
-        <img src={Logo} alt="Logo" className="logo" height="75" color="white" />
+        <Link to="/">
+          <img
+            src={Logo}
+            alt="Logo"
+            className="logo"
+            height="75"
+            color="white"
+          />
+        </Link>
       </div>
       <div className="divider"></div>
-      <div className="header header__left-nav-bar nav-bar-item">
-        {/*  eslint-disable-next-line */}
+      {/* <div className="header header__left-nav-bar nav-bar-item">
+        
         <a href="">
           <span>Explore</span>
           <FontAwesomeIcon className="angleDown" icon={faAngleDown} />
         </a>
-      </div>
+      </div> */}
       <div className="header header__left-nav-bar nav-bar-item">
-        {/*  eslint-disable-next-line */}
-        <a href="#">What we do</a>
+        <Link to="aboutUs">О нас</Link>
       </div>
       <div className="header header__left-nav-bar nav-bar-item">
         {/*  eslint-disable-next-line */}
@@ -31,6 +39,6 @@ function LeftSection() {
       </div>
     </div>
   );
-}
+};
 
 export default LeftSection;

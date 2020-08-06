@@ -35,6 +35,7 @@ const UsersTable = (props) => {
                       props.editRow(user);
                     }}
                     className="button muted-button"
+                    color="warning"
                   >
                     Edit
                   </Button>

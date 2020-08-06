@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { EditUserForm } from "../AdminContent/EditUserForm";
-import { UsersTable } from "../AdminContent/UsersTable";
-import { AddUserForm } from "../AdminContent/AddUserForm";
+import { EditUserForm } from "./EditUserForm";
+import { UsersTable } from "./UsersTable";
+import { AddUserForm } from "./AddUserForm";
 
 export default function AdminContent() {
   const usersData = [

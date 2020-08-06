@@ -2,7 +2,7 @@
   display: flex;
   padding: 0 16px;
   font-size: 16px;
-  border-bottom: 1px solid #ddd;
+  // border-bottom: 1px solid #ddd;
   height: 60px;
   justify-content: space-between;
   font-weight: 500;
@@ -34,7 +34,6 @@
     text-align: bottom;
   }
 
-
   .header__left-nav-bar {
     display: flex;
     align-items: center;
@@ -59,4 +58,20 @@
       content: "";
     }
   }
+}
+.dropDown {
+  width: 300px;
+  background-color: #24292e;
+  margin-left: -205px;
+}
+.dropDown-link {
+  text-align: center;
+  color: white;
+}
+.dropDown-link:hover {
+  color: #606468;
+  background-color: #24292e;
+}
+.dropDown-link:active {
+  background-color: #24292e;
 }

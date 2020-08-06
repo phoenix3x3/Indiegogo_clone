@@ -4,20 +4,20 @@ import LogInModal from "../Auth/LogInModal";
 import Logout from "../Auth/Logout";
 import { useSelector } from "react-redux";
 
-function RightSection(props) {
+const RightSection = (props) => {
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
 
   return (
     <div className="header header__right-nav-bar">
-      <div className="header header__right-nav-bar nav-bar-item">
-        {/* eslint-disable-next-line */}
+      {/* <div className="header header__right-nav-bar nav-bar-item">
+        
         <a href="">Some function</a>
       </div>
       <div className="header header__right-nav-bar nav-bar-item">
-        {/* eslint-disable-next-line */}
+        
         <a href="">Some function</a>
-      </div>
-      <div className="header header__right-nav-bar nav-bar-item divider"></div>
+      </div> */}
+      {/* <div className="header header__right-nav-bar nav-bar-item divider"></div> */}
       {!isAuthenticated ? (
         <div className={`header header__right-nav-bar nav-bar-item auth `}>
           <div className="header header__right-nav-bar nav-bar-item">
@@ -32,7 +32,7 @@ function RightSection(props) {
       )}
     </div>
   );
-}
+};
 
 // const mapStateToProps = (state) => ({
 //   auth: state.auth,

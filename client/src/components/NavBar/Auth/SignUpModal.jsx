@@ -80,7 +80,7 @@ class SignUpModal extends React.Component {
       <div>
         {/* eslint-disable-next-line */}
         <a onClick={this.toggle} href="#">
-          Register
+          Зарегестрироваться
         </a>
         <Modal isOpen={this.state.modal} toggle={this.toggle}>
           <ModalHeader toggle={this.toggle}>Register</ModalHeader>

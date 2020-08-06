@@ -24,7 +24,7 @@ const AddUserForm = (props) => {
   };
 
   return (
-    <Container className="mt-5">
+    <Container className="mt-5 ">
       <h3>Add User</h3>
       <Form onSubmit={handleSubmit}>
         <Label>Name</Label>
@@ -41,7 +41,9 @@ const AddUserForm = (props) => {
           value={user.username}
           onChange={handleInputOnChange}
         />
-        <Button className="mt-3">Add new user</Button>
+        <Button className="mt-3" color="success">
+          Add new user
+        </Button>
       </Form>
     </Container>
   );

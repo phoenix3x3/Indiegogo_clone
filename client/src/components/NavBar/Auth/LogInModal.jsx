@@ -11,6 +11,7 @@ import {
   Alert,
 } from "reactstrap";
 import { connect } from "react-redux";
+
 import PropTypes from "prop-types";
 import { loginUser } from "../../../actions/authActions";
 import { clearErrors } from "../../../actions/errorActions";
@@ -76,7 +77,7 @@ class LogInModal extends React.Component {
       <div>
         {/* eslint-disable-next-line */}
         <a onClick={this.toggle} href="#">
-          LogIn
+          Войти
         </a>
         <Modal isOpen={this.state.modal} toggle={this.toggle}>
           <ModalHeader toggle={this.toggle}>LogIn</ModalHeader>
