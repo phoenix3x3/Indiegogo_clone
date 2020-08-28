@@ -1,0 +1,19 @@
+{
+  "header": {
+    "aboutUs": "О нас",
+    "logIn": "Войти",
+    "signUp": "Зарегистрироваться",
+    "modals": {
+      "signUp": "Регистрация",
+      "name": "Имя",
+      "lastName": "Фамилия",
+      "email": "Электронная почта",
+      "password": "Пароль"
+    },
+    "dropDownMenu": {
+      "profile": "Личный кабинет",
+      "managment": "Управление",
+      "logOut": "Выйти"
+    }
+  }
+}

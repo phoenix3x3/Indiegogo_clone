@@ -8,13 +8,14 @@ import {
   DropdownMenu,
   DropdownItem,
 } from "reactstrap";
+import { useTranslation } from "react-i18next";
 const Logout = (props) => {
   const user = useSelector((state) => state.auth.user);
   const dispatch = useDispatch();
   const handler = () => {
     dispatch(logoutUser());
   };
-
+  const [t, i18n] = useTranslation("common");
   return (
     <>
       <UncontrolledButtonDropdown className="mr-5">
@@ -33,12 +34,14 @@ const Logout = (props) => {
           <DropdownItem divider />
           <Link to="/profile">
             <DropdownItem className="dropDown-link">
-              Личный кабинет
+              {t("header.dropDownMenu.profile")}
             </DropdownItem>
           </Link>
           {/* <DropdownItem divider /> */}
           <Link to="/managment">
-            <DropdownItem className="dropDown-link">Управление</DropdownItem>
+            <DropdownItem className="dropDown-link">
+              {t("header.dropDownMenu.managment")}
+            </DropdownItem>
           </Link>
           <Link to="/">
             <DropdownItem
@@ -46,7 +49,7 @@ const Logout = (props) => {
               color="light"
               className="dropDown-link"
             >
-              Выйти
+              {t("header.dropDownMenu.logOut")}
             </DropdownItem>
           </Link>
         </DropdownMenu>

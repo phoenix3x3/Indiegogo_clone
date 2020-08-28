@@ -1,6 +1,7 @@
-import React, { useEffect } from "react";
+import React, { useEffect, Suspense } from "react";
 import { Provider } from "react-redux";
 import { BrowserRouter as Router } from "react-router-dom";
+import { Spinner } from "reactstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import store from "../../store";
 import { loadUser } from "../../actions/authActions";
@@ -13,17 +14,19 @@ const App = () => {
   });
 
   return (
-    <Provider store={store}>
-      <Router>
-        <header>
-          <NavBar />
-        </header>
-        <main>
-          <Main />
-        </main>
-        <footer></footer>
-      </Router>
-    </Provider>
+    <Suspense fallback={<Spinner />}>
+      <Provider store={store}>
+        <Router>
+          <header>
+            <NavBar />
+          </header>
+          <main>
+            <Main />
+          </main>
+          <footer></footer>
+        </Router>
+      </Provider>
+    </Suspense>
   );
 };
 

@@ -1,0 +1,19 @@
+{
+  "header": {
+    "aboutUs": "About Us",
+    "logIn": "Log In",
+    "signUp": "Sign Up",
+    "modals": {
+      "signUp": "Registration",
+      "name": "Name",
+      "lastName": "LastName",
+      "email": "Email",
+      "password": "Password"
+    },
+    "dropDownMenu": {
+      "profile": "Profile",
+      "managment": "Managment",
+      "logOut": "Log Out"
+    }
+  }
+}

@@ -14,6 +14,8 @@ import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { registerUser } from "../../../actions/authActions";
 import { clearErrors } from "../../../actions/errorActions";
+import { withTranslation } from "react-i18next";
+
 class SignUpModal extends React.Component {
   state = {
     modal: false,
@@ -76,59 +78,62 @@ class SignUpModal extends React.Component {
     this.props.registerUser(newUser);
   };
   render() {
+    const { t } = this.props;
     return (
       <div>
         {/* eslint-disable-next-line */}
         <a onClick={this.toggle} href="#">
-          Зарегестрироваться
+          {t("header.signUp")}
         </a>
         <Modal isOpen={this.state.modal} toggle={this.toggle}>
-          <ModalHeader toggle={this.toggle}>Register</ModalHeader>
+          <ModalHeader toggle={this.toggle}>
+            {t("header.modals.signUp")}
+          </ModalHeader>
           <ModalBody>
             {this.state.msg ? (
               <Alert color="danger">{this.state.msg}</Alert>
             ) : null}
             <Form onSubmit={this.onSubmit}>
               <FormGroup>
-                <Label for="name">Name</Label>
+                <Label for="name">{t("header.modals.name")}</Label>
                 <Input
                   type="text"
                   name="name"
                   id="name"
-                  placeholder="Name"
+                  // placeholder="Name"
                   className="mb-3"
                   onChange={this.onChange}
                 />
-                <Label for="name">LastName</Label>
+                <Label for="name">{t("header.modals.lastName")}</Label>
                 <Input
                   type="text"
                   name="lastName"
                   id="lastName"
-                  placeholder="LastName"
+                  // placeholder="LastName"
                   className="mb-3"
                   onChange={this.onChange}
                 />
-                <Label for="email">Email</Label>
+                <Label for="email">{t("header.modals.email")}</Label>
                 <Input
                   type="email"
                   name="email"
                   id="email"
-                  placeholder="Email"
+                  // placeholder="Email"
                   className="mb-3"
                   onChange={this.onChange}
                 />
 
-                <Label for="password">Password</Label>
+                <Label for="password">{t("header.modals.password")}</Label>
                 <Input
                   type="password"
                   name="password"
                   id="password"
-                  placeholder="Password"
+                  // placeholder="Password"
                   className="mb-3"
                   onChange={this.onChange}
                 />
                 <Button color="dark" style={{ marginTop: "2rem" }} block>
-                  Register
+                  {t("header.signUp")}
                 </Button>
               </FormGroup>
             </Form>
@@ -142,7 +147,8 @@ const mapStateToProps = (state) => ({
   isAuthenticated: state.auth.isAuthenticated, // reducers - index.js - authReducer
   error: state.error,
 });
+const SignUpModalTranslated = withTranslation("common")(SignUpModal);
 
 export default connect(mapStateToProps, { registerUser, clearErrors })(
-  SignUpModal
+  SignUpModalTranslated
 );

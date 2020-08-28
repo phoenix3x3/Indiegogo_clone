@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import {
   Carousel,
   CarouselItem,
-  // CarouselControl,
+  CarouselControl,
   CarouselIndicators,
   // CarouselCaption,
 } from "reactstrap";
@@ -56,7 +56,23 @@ const CoachUser = (props) => {
         onExited={() => setAnimating(false)}
         key={item.src}
       >
-        <img src={item.src} alt={item.altText} />
+        <img
+          style={{ position: "absolute" }}
+          src={item.src}
+          alt={item.altText}
+        />
+        {/* текст записывать в   переменные и портировать наподобие src  altText */}
+        <div
+          style={{
+            position: "relative",
+            height: "850px",
+            textAlign: "center",
+            marginTop: "300px",
+          }}
+        >
+          <h1 style={{ color: "black" }}>EL-sense-Reaction-simulator</h1>
+          {/* <h3 style={{ color: "black" }}></h3> */}
+        </div>
       </CarouselItem>
     );
   });
@@ -74,7 +90,7 @@ const CoachUser = (props) => {
         onClickHandler={goToIndex}
       />
       {slides}
-      {/* <CarouselControl
+      <CarouselControl
         direction="prev"
         directionText="Previous"
         onClickHandler={previous}
@@ -83,7 +99,7 @@ const CoachUser = (props) => {
         direction="next"
         directionText="Next"
         onClickHandler={next}
-      /> */}
+      />
     </Carousel>
   );
 };
